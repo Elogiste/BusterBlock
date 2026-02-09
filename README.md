@@ -96,6 +96,7 @@ rectangle "Accès Manager (BusterBlock API)" {
 
 1. Clone le projet
 <br>
+<br>
 2. Au même niveau que les fichiers Docker, ajouter le fichier .env contenant:
 <br>
 MARIADB_HOST=nom de votre service qui crée le conteneur de la bd, dans mon cas db
@@ -118,6 +119,7 @@ AUDIENCE=identifiant de l'API pour laquelle le service d'authentification est of
 <br>
 ISSUER=https://api_auth:8090/auth/
 <br>
+<br>
 3. Ajouter aussi un fichier .env-test contenant:
 <br>
 MARIADB_HOST=nom de votre service qui crée le conteneur de la bd, dans mon cas db
@@ -132,9 +134,11 @@ MARIADB_PASSWORD=mot de passe de l'utilisateur
 <br>
 MARIADB_PORT=3306
 <br>
+<br>
 4. Supprimez les conteneurs et les volumes avec la commande:
 <br>
 docker compose down -v
+<br>
 <br>
 5. Recréez et relancez les conteneurs avec la commande:
 <br>
