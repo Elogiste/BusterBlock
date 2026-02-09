@@ -98,37 +98,37 @@ rectangle "Accès Manager (BusterBlock API)" {
 <br>
 2. Au même niveau que les fichiers Docker, ajouter le fichier .env contenant:
 <br>
-MARIADB_HOST=<nom de votre service qui crée le conteneur de la bd, dans mon cas db>
+MARIADB_HOST=nom de votre service qui crée le conteneur de la bd, dans mon cas db
 <br>
-MARIADB_ROOT_PASSWORD=<mot de passe de l'utilisateur root>
+MARIADB_ROOT_PASSWORD=mot de passe de l'utilisateur root
 <br>
-MARIADB_DATABASE=<nom de votre bd, dans mon cas busterblock_db>
+MARIADB_DATABASE=nom de votre bd, dans mon cas busterblock_db
 <br>
-MARIADB_USER=<nom de l'utilisateur, dans ce cas api>
+MARIADB_USER=nom de l'utilisateur, dans ce cas api
 <br>
-MARIADB_PASSWORD=<mot de passe de l'utilisateur, dans ce cas root>
+MARIADB_PASSWORD=mot de passe de l'utilisateur, dans ce cas root
 <br>
 MARIADB_PORT=3306
 <br>
-DOMAINE=<domaine du service d'authentification, dans mon cas api_auth:8090/auth/>
+DOMAINE=domaine du service d'authentification, dans mon cas api_auth:8090/auth/
 <br>
-CLE_PUBLIQUE=<adresse du point d'accès sur le serveur d'authentification pour récupérer la clé publique, dans mon cas http://api_auth:8080/auth/.well-known/jwks.json>
+CLE_PUBLIQUE=adresse du point d'accès sur le serveur d'authentification pour récupérer la clé publique, dans mon cas http://api_auth:8080/auth/.well-known/jwks.json
 <br>
-AUDIENCE=<identifiant de l'API pour laquelle le service d'authentification est offert, dans mon cas busterblock_api>
+AUDIENCE=identifiant de l'API pour laquelle le service d'authentification est offert, dans mon cas busterblock_api
 <br>
 ISSUER=https://api_auth:8090/auth/
 <br>
 3. Ajouter aussi un fichier .env-test contenant:
 <br>
-MARIADB_HOST=<nom de votre service qui crée le conteneur de la bd, dans mon cas db>
+MARIADB_HOST=nom de votre service qui crée le conteneur de la bd, dans mon cas db
 <br>
-MARIADB_ROOT_PASSWORD=<mot de passe de l'utilisateur root>
+MARIADB_ROOT_PASSWORD=mot de passe de l'utilisateur root
 <br>
-MARIADB_DATABASE=<nom de la bd de test, dans mon cas busterblock_test>
+MARIADB_DATABASE=nom de la bd de test, dans mon cas busterblock_test
 <br>
-MARIADB_USER=<nom de l'utilisateur, dans ce cas api>
+MARIADB_USER=nom de l'utilisateur, dans ce cas api
 <br>
-MARIADB_PASSWORD=<mot de passe de l'utilisateur>
+MARIADB_PASSWORD=mot de passe de l'utilisateur
 <br>
 MARIADB_PORT=3306
 <br>
