@@ -1,0 +1,14 @@
+left to right direction
+skinparam packageStyle rectangle
+
+actor "personne non-membre" as nonMember
+
+rectangle "API publique de BusterBlock" {
+  nonMember --> (Consulter le répertoire des médias)
+  nonMember --> (Rechercher un item par titre)
+  nonMember --> (Consulter le détail d'un item)
+  nonMember --> (Inscription au service)
+  nonMember  --> (Consulter un magasin)
+  nonMember  --> (Rechercher un magasin)
+  nonMember  --> (Filtrer la recherche d'un magasin)
+}

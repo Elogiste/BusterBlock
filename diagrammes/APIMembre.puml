@@ -1,0 +1,15 @@
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Membre" as member
+
+rectangle "Accès Membre (BusterBlock API)" {
+  member --> (Consulter le répertoire des médias)
+  member --> (Rechercher des items)
+  member --> (Location des items)
+  member --> (Retour des items)
+  member --> (Ré-inscription / Gestion Abonnement)
+  member  --> (Consulter un magasin)
+  member  --> (Rechercher un magasin)
+  member  --> (Filtrer la recherche d'un magasin)
+}

@@ -1,0 +1,56 @@
+@startuml
+left to right direction
+ 
+' Liste des Acteurs
+rectangle "<img:https://cdn-icons-png.flaticon.com/512/3736/3736511.png{scale=0.25}>\nNon-Membre" as nm
+rectangle "<img:https://cdn-icons-png.flaticon.com/512/3736/3736531.png{scale=0.25}>\nMembre" as m
+rectangle "<img:https://cdn-icons-png.flaticon.com/128/3736/3736509.png{scale=1}>\nEmployé" as e 
+ 
+' Liste des Cas d'Usages et des Méthodes
+rectangle "Collections des Films" {
+usecase "Consulter le Répertoire de Films" as UC1
+note right of UC1 #PaleGreen : GET
+usecase "Chercher un Film" as UC2
+note right of UC2 #PaleGreen : GET paramétré
+usecase "Consulter les Détails d'un Film" as UC3
+note right of UC3 #PaleGreen : GET par ID 
+usecase "Louer un Film" as UC4
+note right of UC4 #LightSkyBlue : PATCH
+usecase "Retourner un Film" as UC5
+note right of UC5 #LightSkyBlue : PATCH
+usecase "Prolonger une Location d'un Film" as UC6
+note right of UC6 #LightSkyBlue : PATCH
+usecase "Ajouter un Film à l'Inventaire" as UC7
+note right of UC7 #LightSalmon : POST
+usecase "Modifier un Film" as UC8
+note right of UC8 #Plum : PUT
+usecase "Modifier la Disponibilité d'un Film" as UC9
+note right of UC9 #LightSkyBlue : PATCH
+usecase "Retirer un Film de l'Inventaire" as UC10
+note right of UC10 #IndianRed : DELETE
+} 
+ 
+' Flèches
+nm --> UC1
+nm --> UC2
+nm --> UC3 
+ 
+m --> UC4
+m --> UC5
+m --> UC6 
+ 
+e --> UC7
+e --> UC8
+e --> UC9
+e --> UC10 
+ 
+' Organisation des Cas
+UC1 -right- UC2 #transparent
+UC2 -right- UC3 #transparent
+UC8 -right- UC9 #transparent
+UC7 -right- UC10 #transparent
+ 
+' Héritage des Acteurs
+nm <|-- m
+m <|-- e
+@enduml

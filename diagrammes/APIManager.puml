@@ -1,0 +1,21 @@
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Manager" as manager
+
+rectangle "Accès Manager (BusterBlock API)" {
+  manager --> (Consulter le répertoire des médias)
+  manager --> (Rechercher des items)
+  manager --> (Louer des items)
+  manager --> (Retourner des items)
+  manager --> (Modifier la location / disponibilité)
+  manager --> (Modifier/Ajouter/Supprimer l’item)
+  manager --> (Manipuler les abonnements)
+  manager  --> (Consulter un magasin)
+  manager  --> (Rechercher un magasin)
+  manager  --> (Filtrer la recherche d'un magasin)
+  manager  --> (Gérer l’inventaire par magasin)
+  manager  --> (Ajouter un magasin)
+  manager  --> (Modifier un magasin)
+  manager  --> (Supprimer un magasin)
+}

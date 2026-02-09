@@ -1,0 +1,33 @@
+-- ===================================================================
+-- 2. Insertion des données
+-- ===================================================================
+
+START TRANSACTION;
+
+-- Magasins
+INSERT INTO magasins (id, nom, adresse, telephone, status) VALUES
+(1, 'BusterBlock Montréal', '145 Rue Sainte-Catherine, Montréal, QC', '514-890-1234', TRUE),
+(2, 'BusterBlock Laval', '2100 Boulevard Le Corbusier, Laval, QC', '450-322-8877', FALSE),
+(3, 'BusterBlock Québec', '84 Rue Saint-Jean, Québec, QC', '418-652-0911', TRUE),
+(4, 'BusterBlock Gatineau', '200 Boulevard Gréber, Gatineau, QC', '819-777-4321', TRUE),
+(5, 'BusterBlock Sherbrooke', '91 Rue King Ouest, Sherbrooke, QC', '819-563-2233', FALSE),
+(6, 'BusterBlock Trois-Rivières', '50 Rue des Forges, Trois-Rivières, QC', '819-370-9955', TRUE),
+(7, 'BusterBlock Longueuil', '123 Rue Saint-Charles Ouest, Longueuil, QC', '450-677-0910', TRUE),
+(8, 'BusterBlock Repentigny', '79 Boulevard Brien, Repentigny, QC', '450-581-1222', TRUE),
+(9, 'BusterBlock Drummondville', '15 Rue Lindsay, Drummondville, QC', '819-478-3344', TRUE),
+(10, 'BusterBlock Lévis', '44 Route du Président-Kennedy, Lévis, QC', '418-835-5566', FALSE);
+
+-- Films
+INSERT INTO films (id, id_magasin, titre, genre, resume, nbr_exemplaires_disponible) VALUES
+(1, 1, 'Le Dernier Combat', 'Action', 'Un soldat tente de survivre dans un monde post-apocalyptique.', 5),
+(2, 1, 'Amour de Neige', 'Romance', 'Deux inconnus se rencontrent dans un chalet isolé.', 0),
+(3, 2, 'L’Ombre du Passé', 'Thriller', 'Un détective découvre un secret de famille bouleversant.', 7),
+(4, 3, 'Rires et Larmes', 'Comédie dramatique', 'Une mère célibataire apprend à rire à nouveau.', 3),
+(5, 4, 'L’Étoile du Nord', 'Science-fiction', 'Un équipage spatial se perd dans une galaxie lointaine.', 4),
+(6, 5, 'Sous la Pluie', 'Drame', 'Un musicien lutte contre sa dépendance et son passé.', 0),
+(7, 6, 'L’Invasion des Chats Zombies', 'Horreur', 'Des chats mutants attaquent une petite ville.', 1),
+(8, 7, 'Réalité Virtuelle', 'Science-fiction', 'Un programmeur est piégé dans son propre jeu.', 9),
+(9, 8, 'Cuisine en Folie', 'Comédie', 'Un chef maladroit essaie de sauver son restaurant.', 6),
+(10, 9, 'Les Rivages du Temps', 'Fantastique', 'Une jeune femme voyage à travers les époques.', 0);
+
+COMMIT;

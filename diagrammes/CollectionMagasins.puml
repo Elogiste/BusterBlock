@@ -1,0 +1,58 @@
+@startuml
+left to right direction 
+
+' --- Acteurs ---
+rectangle "<img:https://cdn-icons-png.flaticon.com/512/3736/3736531.png{scale=0.25}>\nMembre" as m
+rectangle "<img:https://cdn-icons-png.flaticon.com/128/3736/3736509.png{scale=1}>\nEmployé" as e
+rectangle "<img:https://cdn-icons-png.flaticon.com/512/1995/1995574.png{scale=0.25}>\nManager" as g
+
+' --- Cas d'utilisation ---
+rectangle "Collections des Magasins" {
+  usecase "Chercher un Magasin" as UC1
+  note right of UC1 #PaleGreen : GET paramétré
+
+  usecase "Consulter les Détails d'un Magasin" as UC2
+  note right of UC2 #PaleGreen : GET par ID
+
+  usecase "Modifier les Détails d'un Magasin" as UC3
+  note right of UC3 #LightSkyBlue : PATCH
+
+  usecase "Ajouter un Magasin" as UC4
+  note right of UC4 #LightSalmon : POST
+
+  usecase "Retirer un Magasin" as UC5
+  note right of UC5 #IndianRed : DELETE
+
+  usecase "Filtrer les Magasins selon la Disponibilité d’un Film" as UC6
+  note right of UC6 #PaleGreen : GET filtré (par disponibilité)
+
+  usecase "Gérer l’Inventaire par Magasin" as UC7
+  note right of UC7 #LightSkyBlue : PATCH / POST / DELETE selon action
+}
+
+' --- Associations ---
+m --> UC1
+m --> UC2
+m --> UC6
+
+e --> UC1
+e --> UC2
+e --> UC6
+e --> UC7
+
+g --> UC1
+g --> UC2
+g --> UC3
+g --> UC4
+g --> UC5
+g --> UC6
+g --> UC7
+
+' --- Organisation visuelle ---
+UC1 -right- UC3 #transparent
+UC2 -right- UC3 #transparent
+UC5 -right- UC4 #transparent
+UC6 -down- UC2 #transparent
+UC7 -right- UC5 #transparent
+
+@enduml

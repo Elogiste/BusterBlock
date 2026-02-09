@@ -1,0 +1,4531 @@
+{
+  "info": {
+    "_postman_id": "9d40f48b-277c-4c2c-ba53-7827080685f7",
+    "name": "BusterBlock",
+    "description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" alt=\"\" height=\"1530\" width=\"2162\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n    \n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Films",
+      "item": [
+        {
+          "name": "Consulter le repertoire des films",
+          "id": "945d8ea5-7ea6-4fc5-bef4-3837f382c60f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/films"
+          },
+          "response": [
+            {
+              "id": "e861b121-9c85-4b5c-8989-9c7afc3cbb97",
+              "name": "200",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/films"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:05:23 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=6bfd4e22427854d8"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=886f3bd8cdf461cd"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759071983"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "142"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=cV2UbUbhEizVFTFCwFnf6gETiR6dI_YR4JXvqCTyHQk-1759071923-1.0.1.1-S9p5OoYkPxSSanMUlmv9oDL6cta8MilMA_DSVp.fZFnaozxlzNJcSI2u26lB9yB_wnAVrcY90XQsrdzeAmtldkZRouPZEgP68XyhYDEBmZo; path=/; expires=Sun, 28-Sep-25 15:35:23 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "98642380acf8a2e4-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "[\n  {\n    \"id\": 101,\n    \"title\": \"Inception\",\n    \"genre\": \"Science Fiction\",\n    \"releaseYear\": 2010,\n    \"available\": true\n  },\n  {\n    \"id\": 102,\n    \"title\": \"The Dark Knight\",\n    \"genre\": \"Action\",\n    \"releaseYear\": 2008,\n    \"available\": false\n  }\n]\n"
+            },
+            {
+              "id": "a46ea023-f59b-4b6b-a25a-3df85ce693f0",
+              "name": "404",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/films"
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:05:23 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=6bfd4e22427854d8"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=886f3bd8cdf461cd"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759071983"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "142"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=cV2UbUbhEizVFTFCwFnf6gETiR6dI_YR4JXvqCTyHQk-1759071923-1.0.1.1-S9p5OoYkPxSSanMUlmv9oDL6cta8MilMA_DSVp.fZFnaozxlzNJcSI2u26lB9yB_wnAVrcY90XQsrdzeAmtldkZRouPZEgP68XyhYDEBmZo; path=/; expires=Sun, 28-Sep-25 15:35:23 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "98642380acf8a2e4-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"error\": \"Aucun film disponible\"\n}\n"
+            }
+          ]
+        },
+        {
+          "name": "Chercher un film",
+          "id": "9e2d5eff-1adf-4fa8-8404-722060b75667",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/films/search?q=inception",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "films",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "inception"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ee046555-f46d-4d3f-9377-86b23da81514",
+              "name": "200",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/films/search?q=inception",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "films",
+                    "search"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "inception"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:11:02 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=ef892b0c04a3aa8b"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=c86357a000f1679d"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "116"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759072265"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "159"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=igMipTc0WOQltCxZl_lD1twUGJ00_T.YwRYUy1tNCGM-1759072262-1.0.1.1-QehHh.FPUlN.0z8kRYZx6EmrNrmBfhJTDecdHjLyUNj9yEzj6WqeLmWgCI3ulzf_MpvpJqr7Re9vjvpS04UObpy4IugJDS7WMVFybvCsMfA; path=/; expires=Sun, 28-Sep-25 15:41:02 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "98642bc9dbbaa254-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "[\n  {\n    \"id\": 101,\n    \"title\": \"Inception\",\n    \"genre\": \"Science Fiction\",\n    \"releaseYear\": 2010,\n    \"available\": true\n  }\n]\n"
+            },
+            {
+              "id": "f5d07eab-187e-4df4-8ef0-cdda4d123d3d",
+              "name": "404",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/films/search?q=inception",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "films",
+                    "search"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "inception"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:11:44 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "98642cd0ff00a254-YUL"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=ef892b0c04a3aa8b"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=c86357a000f1679d"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "116"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759072265"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "137"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=igMipTc0WOQltCxZl_lD1twUGJ00_T.YwRYUy1tNCGM-1759072262-1.0.1.1-QehHh.FPUlN.0z8kRYZx6EmrNrmBfhJTDecdHjLyUNj9yEzj6WqeLmWgCI3ulzf_MpvpJqr7Re9vjvpS04UObpy4IugJDS7WMVFybvCsMfA; path=/; expires=Sun, 28-Sep-25 15:41:02 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=dRehXh4B_M5RGinxMHMHJQGPRA3HgLpDIIlTJ74cz2A-1759072304-1.0.1.1-St3e3YyrKg8Ld4EsUfj.Q8DLiHYfV3TmgEz1ITaFZcLsR588o.W2Prm_mxjMjW7Hc1WstLBj033iMzd1HOaTVZp2E3i8UreNSKb.DyOtNhU; path=/; expires=Sun, 28-Sep-25 15:41:44 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"error\": \"Film non trouvé\"\n}\n"
+            }
+          ]
+        },
+        {
+          "name": "Consulter les détails d'un film",
+          "id": "2e41b0c4-6ba6-4131-abf5-5b3dec180c49",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/films/101"
+          },
+          "response": [
+            {
+              "id": "71400920-7d8b-48e0-a209-e6e1603c7d51",
+              "name": "200",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/films/101"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:14:25 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "986430ba5d1aa296-YUL"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=6bfd4e22427854d8"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=886f3bd8cdf461cd"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759071983"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "237"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=cV2UbUbhEizVFTFCwFnf6gETiR6dI_YR4JXvqCTyHQk-1759071923-1.0.1.1-S9p5OoYkPxSSanMUlmv9oDL6cta8MilMA_DSVp.fZFnaozxlzNJcSI2u26lB9yB_wnAVrcY90XQsrdzeAmtldkZRouPZEgP68XyhYDEBmZo; path=/; expires=Sun, 28-Sep-25 15:35:23 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=zNCDIsuawYXuNWfbw9_yHQKPwOFxbQWILc2y0btpX2M-1759072465-1.0.1.1-UJHVizziIuEViAEgM_9T4_13Qr8X0CMo3ntTr7EKBRA1EixKtbzUp3C4FwwdFh6F1SoRv460QjQ1u5Ooqvd2.0ytjaPuVz2szFTgykRdbXU; path=/; expires=Sun, 28-Sep-25 15:44:25 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"id\": 101,\n  \"title\": \"Inception\",\n  \"genre\": \"Science Fiction\",\n  \"releaseYear\": 2010,\n  \"director\": \"Christopher Nolan\",\n  \"duration\": 148,\n  \"available\": true\n}\n"
+            },
+            {
+              "id": "6d72753f-4c5a-415a-9948-416db9724258",
+              "name": "404",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/films/101"
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:14:25 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "986430ba5d1aa296-YUL"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=6bfd4e22427854d8"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=886f3bd8cdf461cd"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759071983"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "237"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=cV2UbUbhEizVFTFCwFnf6gETiR6dI_YR4JXvqCTyHQk-1759071923-1.0.1.1-S9p5OoYkPxSSanMUlmv9oDL6cta8MilMA_DSVp.fZFnaozxlzNJcSI2u26lB9yB_wnAVrcY90XQsrdzeAmtldkZRouPZEgP68XyhYDEBmZo; path=/; expires=Sun, 28-Sep-25 15:35:23 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=zNCDIsuawYXuNWfbw9_yHQKPwOFxbQWILc2y0btpX2M-1759072465-1.0.1.1-UJHVizziIuEViAEgM_9T4_13Qr8X0CMo3ntTr7EKBRA1EixKtbzUp3C4FwwdFh6F1SoRv460QjQ1u5Ooqvd2.0ytjaPuVz2szFTgykRdbXU; path=/; expires=Sun, 28-Sep-25 15:44:25 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"error\": \"Film non trouvé\"\n}\n"
+            }
+          ]
+        },
+        {
+          "name": "Louer un film",
+          "id": "4266cd4d-0119-4615-a93d-681ac2d24d10",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"customerId\": 501,\r\n  \"rentalDays\": 3\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{base_url}}/films/101/rent"
+          },
+          "response": [
+            {
+              "id": "f2a1d07e-00bb-4148-8ca4-4fb028e3a7a0",
+              "name": "201",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"customerId\": 501,\r\n  \"rentalDays\": 3\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films/101/rent"
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:17:50 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=8af473ba21d502ec"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=6fc3d5c444a7ae11"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759072730"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "190"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=72e3wITSJz2YQBLOcE3ABpxfuagt_QCDGPcbS7K9JiE-1759072670-1.0.1.1-meNI7aP54Xi0C9sWz.._qB0yopWEEonPLUZoO6r9XeDEtXz1U9OyC306BehXFLZEuhNgiru2Z23yVWm9PT3ygMNyA29zceK92vvFS0Nq1ws; path=/; expires=Sun, 28-Sep-25 15:47:50 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "986435c019d2a2ba-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"rentalId\": 9001,\n  \"filmId\": 101,\n  \"customerId\": 501,\n  \"rentalDate\": \"2025-09-27\",\n  \"dueDate\": \"2025-09-30\",\n  \"status\": \"ongoing\"\n}\n"
+            },
+            {
+              "id": "d78d9e4b-260f-4da3-9105-9f9ecb94172a",
+              "name": "400",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"customerId\": 501,\r\n  \"rentalDays\": 3\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films/101/rent"
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:17:50 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=8af473ba21d502ec"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=6fc3d5c444a7ae11"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759072730"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "190"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=72e3wITSJz2YQBLOcE3ABpxfuagt_QCDGPcbS7K9JiE-1759072670-1.0.1.1-meNI7aP54Xi0C9sWz.._qB0yopWEEonPLUZoO6r9XeDEtXz1U9OyC306BehXFLZEuhNgiru2Z23yVWm9PT3ygMNyA29zceK92vvFS0Nq1ws; path=/; expires=Sun, 28-Sep-25 15:47:50 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "986435c019d2a2ba-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"error\": \"Invalid rental request\"\n}\n"
+            },
+            {
+              "id": "ad6c23fe-a2c3-4ace-b1ea-f753e215db1a",
+              "name": "409",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"customerId\": 501,\r\n  \"rentalDays\": 3\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films/101/rent"
+              },
+              "status": "Conflict",
+              "code": 409,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:17:50 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=8af473ba21d502ec"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=6fc3d5c444a7ae11"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759072730"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "190"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=72e3wITSJz2YQBLOcE3ABpxfuagt_QCDGPcbS7K9JiE-1759072670-1.0.1.1-meNI7aP54Xi0C9sWz.._qB0yopWEEonPLUZoO6r9XeDEtXz1U9OyC306BehXFLZEuhNgiru2Z23yVWm9PT3ygMNyA29zceK92vvFS0Nq1ws; path=/; expires=Sun, 28-Sep-25 15:47:50 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "986435c019d2a2ba-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"error\": \"Film already rented\"\n}\n"
+            }
+          ]
+        },
+        {
+          "name": "Retourner un film",
+          "id": "ab90ffbe-eafe-4272-90fa-0b04750aed0e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{base_url}}/films/101/return"
+          },
+          "response": [
+            {
+              "id": "f923b4d1-4104-4bb6-afd9-4153dd4694f0",
+              "name": "200",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films/101/return"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:20:59 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=739b570d89e7bb29"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=3835d772edee2e45"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759072919"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "173"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=21G6qnL.7I9GyJk2YL4W76tgmgeEP_pfK9NwmhBMrxk-1759072859-1.0.1.1-tFZ1qrNGc4kch5_72hSDl1E7ol6pm6wj705TiUgkHfZzUdKD19opRKvRPCR4r4TCdgHBf.8xeQrSohbLvBeu_4WvWZo8H8ffmTTgGaqpA0A; path=/; expires=Sun, 28-Sep-25 15:50:59 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "98643a59dcf2a28b-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"rentalId\": 9001,\n  \"filmId\": 101,\n  \"returnDate\": \"2025-09-29\",\n  \"status\": \"returned\"\n}\n"
+            },
+            {
+              "id": "c77f7ace-ae3e-4d98-8230-e474a0895f74",
+              "name": "400",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films/101/return"
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:20:59 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=739b570d89e7bb29"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=3835d772edee2e45"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759072919"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "173"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=21G6qnL.7I9GyJk2YL4W76tgmgeEP_pfK9NwmhBMrxk-1759072859-1.0.1.1-tFZ1qrNGc4kch5_72hSDl1E7ol6pm6wj705TiUgkHfZzUdKD19opRKvRPCR4r4TCdgHBf.8xeQrSohbLvBeu_4WvWZo8H8ffmTTgGaqpA0A; path=/; expires=Sun, 28-Sep-25 15:50:59 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "98643a59dcf2a28b-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"error\": \"Invalid return request\"\n}\n"
+            },
+            {
+              "id": "bb18163e-0315-4f79-9617-7a118d5357db",
+              "name": "404",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films/101/return"
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:20:59 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=739b570d89e7bb29"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=3835d772edee2e45"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759072919"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "173"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=21G6qnL.7I9GyJk2YL4W76tgmgeEP_pfK9NwmhBMrxk-1759072859-1.0.1.1-tFZ1qrNGc4kch5_72hSDl1E7ol6pm6wj705TiUgkHfZzUdKD19opRKvRPCR4r4TCdgHBf.8xeQrSohbLvBeu_4WvWZo8H8ffmTTgGaqpA0A; path=/; expires=Sun, 28-Sep-25 15:50:59 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "98643a59dcf2a28b-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"error\": \"Rental not found\"\n}\n"
+            }
+          ]
+        },
+        {
+          "name": "Prolonger une location",
+          "id": "acc139be-cacb-4a53-a5ba-c92a6a968164",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"extraDays\": 2\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{base_url}}/films/101/extend"
+          },
+          "response": [
+            {
+              "id": "6c891d8e-d792-4864-84bb-b8f0bee8ecaf",
+              "name": "200",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"extraDays\": 2\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films/101/extend"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:26:08 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=ab9a5807efbbba2c"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=c4f1c1f2c390fcb8"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759073228"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "174"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=4edCICDjFgB.EMTsIlaa6zW1JrojXu1jaHggUcyK9KA-1759073168-1.0.1.1-IMdWqHgTc_nnmJITQ_Q4rRG7AjRTkgjwRP_M0JnycAumEC4e.P8_x6DmXzpHrbcVKO0sGd0UpkKTo7uk12CyTHcBJKN_Z4xrv_.oNRVP.Gg; path=/; expires=Sun, 28-Sep-25 15:56:08 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "986441e72f33a279-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"rentalId\": 9001,\n  \"filmId\": 101,\n  \"dueDate\": \"2025-10-02\",\n  \"status\": \"ongoing\"\n}\n"
+            },
+            {
+              "id": "bc8638cf-6f05-4a65-a874-747e29aa2faf",
+              "name": "400",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"extraDays\": 2\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films/101/extend"
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:26:08 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=ab9a5807efbbba2c"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=c4f1c1f2c390fcb8"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759073228"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "174"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=4edCICDjFgB.EMTsIlaa6zW1JrojXu1jaHggUcyK9KA-1759073168-1.0.1.1-IMdWqHgTc_nnmJITQ_Q4rRG7AjRTkgjwRP_M0JnycAumEC4e.P8_x6DmXzpHrbcVKO0sGd0UpkKTo7uk12CyTHcBJKN_Z4xrv_.oNRVP.Gg; path=/; expires=Sun, 28-Sep-25 15:56:08 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "986441e72f33a279-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"error\": \"Extension not allowed\"\n}\n"
+            },
+            {
+              "id": "16bc5f7c-a1b2-4056-82c4-ebce33e8ddef",
+              "name": "404",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"extraDays\": 2\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films/101/extend"
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:26:08 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=ab9a5807efbbba2c"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=c4f1c1f2c390fcb8"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759073228"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "174"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=4edCICDjFgB.EMTsIlaa6zW1JrojXu1jaHggUcyK9KA-1759073168-1.0.1.1-IMdWqHgTc_nnmJITQ_Q4rRG7AjRTkgjwRP_M0JnycAumEC4e.P8_x6DmXzpHrbcVKO0sGd0UpkKTo7uk12CyTHcBJKN_Z4xrv_.oNRVP.Gg; path=/; expires=Sun, 28-Sep-25 15:56:08 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "986441e72f33a279-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"error\": \"Rental not found\"\n}\n"
+            }
+          ]
+        },
+        {
+          "name": "Ajouter un film",
+          "id": "bececc6e-464f-4362-9e31-e62e728babac",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Interstellar\",\r\n  \"genre\": \"Science Fiction\",\r\n  \"releaseYear\": 2014,\r\n  \"director\": \"Christopher Nolan\",\r\n  \"duration\": 169\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{base_url}}/films"
+          },
+          "response": [
+            {
+              "id": "9ab77372-1bbc-4203-bde3-b7efd16b93c3",
+              "name": "201",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"title\": \"Interstellar\",\r\n  \"genre\": \"Science Fiction\",\r\n  \"releaseYear\": 2014,\r\n  \"director\": \"Christopher Nolan\",\r\n  \"duration\": 169\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films"
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:28:12 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=6f50da3579021060"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=0aca499d48cf51a5"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "118"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759073313"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "184"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=GE1JVksUjZGWwesoV97g.4KkTns7oZh_kcTLRBSk0RI-1759073292-1.0.1.1-Zznw5kES04ebpnz95VHeL6Xqm.AOr3qAUGoyVvF.C.wGl0BYM8iVcxpruutqfe1d4qx4qWh.RgdVz_sXO9f.57dTypeRr2D6S5OerVd.2P4; path=/; expires=Sun, 28-Sep-25 15:58:12 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "986444edf956a279-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"id\": 103,\n  \"title\": \"Interstellar\",\n  \"genre\": \"Science Fiction\",\n  \"releaseYear\": 2014,\n  \"director\": \"Christopher Nolan\",\n  \"duration\": 169,\n  \"available\": true\n}\n"
+            },
+            {
+              "id": "dc3a8b8e-b882-4b61-8614-a95e91e528c4",
+              "name": "400",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"title\": \"Interstellar\",\r\n  \"genre\": \"Science Fiction\",\r\n  \"releaseYear\": 2014,\r\n  \"director\": \"Christopher Nolan\",\r\n  \"duration\": 169\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films"
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:28:12 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=6f50da3579021060"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=0aca499d48cf51a5"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "118"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759073313"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "184"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=GE1JVksUjZGWwesoV97g.4KkTns7oZh_kcTLRBSk0RI-1759073292-1.0.1.1-Zznw5kES04ebpnz95VHeL6Xqm.AOr3qAUGoyVvF.C.wGl0BYM8iVcxpruutqfe1d4qx4qWh.RgdVz_sXO9f.57dTypeRr2D6S5OerVd.2P4; path=/; expires=Sun, 28-Sep-25 15:58:12 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "986444edf956a279-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"error\": \"Invalid film data\"\n}\n"
+            }
+          ]
+        },
+        {
+          "name": "Modifier un film",
+          "id": "7e7ad1d8-b5b9-4992-af7e-df7c1a895731",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 101,\r\n  \"title\": \"Inception - Remastered\",\r\n  \"genre\": \"Science Fiction\",\r\n  \"releaseYear\": 2010,\r\n  \"director\": \"Christopher Nolan\",\r\n  \"duration\": 150,\r\n  \"available\": true\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{base_url}}/films/101"
+          },
+          "response": [
+            {
+              "id": "cae8b51b-1945-4a4f-a309-0c70f13d1f7d",
+              "name": "200",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"id\": 101,\r\n  \"title\": \"Inception - Remastered\",\r\n  \"genre\": \"Science Fiction\",\r\n  \"releaseYear\": 2010,\r\n  \"director\": \"Christopher Nolan\",\r\n  \"duration\": 150,\r\n  \"available\": true\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films/101"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:30:37 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=d51daf89c0e2a1d4"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=7fd2c5c690b81354"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759073496"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "574"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=a6WxtUr2AWdh.u0I9JgAxJEFsoM_jufTDTdmyXFnUtg-1759073437-1.0.1.1-HHGYg1tIhll9wsYbqJ3cWDmNESLxvuPS2x5d4yFpIvqQAW.udGV7DslCGT88V1tLLNT0NHMN.RakRwytX8Ya_cxs_mPTH0GJqzb6SaA0d4w; path=/; expires=Sun, 28-Sep-25 16:00:37 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "986448723c95a299-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"id\": 101,\n  \"title\": \"Inception - Remastered\",\n  \"genre\": \"Science Fiction\",\n  \"releaseYear\": 2010,\n  \"director\": \"Christopher Nolan\",\n  \"duration\": 150,\n  \"available\": true\n}\n"
+            },
+            {
+              "id": "373377a5-6f60-4902-a0a0-ef364a241232",
+              "name": "404",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"id\": 101,\r\n  \"title\": \"Inception - Remastered\",\r\n  \"genre\": \"Science Fiction\",\r\n  \"releaseYear\": 2010,\r\n  \"director\": \"Christopher Nolan\",\r\n  \"duration\": 150,\r\n  \"available\": true\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films/101"
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:31:45 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "98644a1e3a71a299-YUL"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=d51daf89c0e2a1d4"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=7fd2c5c690b81354"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759073496"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "199"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=a6WxtUr2AWdh.u0I9JgAxJEFsoM_jufTDTdmyXFnUtg-1759073437-1.0.1.1-HHGYg1tIhll9wsYbqJ3cWDmNESLxvuPS2x5d4yFpIvqQAW.udGV7DslCGT88V1tLLNT0NHMN.RakRwytX8Ya_cxs_mPTH0GJqzb6SaA0d4w; path=/; expires=Sun, 28-Sep-25 16:00:37 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=X35MbiGPklYOhB.8CBZJKal.4Yb83CYRib8B1qFpiAM-1759073505-1.0.1.1-p51FwHYqhS18fBfOepKtnSJVX8Yj0gKWi0YGFSRObGVTGeLtrmMgplLkJNY0Wb6MOHN8oxzL8AMJzqFX04fZlxKZSP8mmKEedbzMpXvl7Qc; path=/; expires=Sun, 28-Sep-25 16:01:45 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"error\": \"Film not found\"\n}\n"
+            }
+          ]
+        },
+        {
+          "name": "Modifier la disponibilité d'un film",
+          "id": "4dd03a5b-9cba-41d6-b642-2def6c1efff4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"available\": false\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{base_url}}/films/101"
+          },
+          "response": [
+            {
+              "id": "c1c25ad9-e00d-4a97-a72f-52ab34310c49",
+              "name": "200",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"available\": false\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films/101"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:32:47 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=110b8ea6c4b871eb"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=cc157b60035bb2fa"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759073627"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "180"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=tO1jmdpRvDdEjfnfSynCD9wtPGntyypgSZB2Nae2B_I-1759073567-1.0.1.1-5Ix4waql4wRdx.i_vXV8QxbgLgwPMvcziqMn.UNUbfEkHkqhCmWIz9fiH2muRBvDyVphmMjeJGRKjASgS.7F3TUTPikb6n27KqzdZkSzh4U; path=/; expires=Sun, 28-Sep-25 16:02:47 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "98644ba16e4ca299-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"id\": 101,\n  \"title\": \"Inception\",\n  \"available\": false\n}\n"
+            },
+            {
+              "id": "1c22c0cc-8658-44d3-8782-a9fd00e0effe",
+              "name": "404",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"available\": false\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films/101"
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:32:47 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=110b8ea6c4b871eb"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=cc157b60035bb2fa"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759073627"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "180"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=tO1jmdpRvDdEjfnfSynCD9wtPGntyypgSZB2Nae2B_I-1759073567-1.0.1.1-5Ix4waql4wRdx.i_vXV8QxbgLgwPMvcziqMn.UNUbfEkHkqhCmWIz9fiH2muRBvDyVphmMjeJGRKjASgS.7F3TUTPikb6n27KqzdZkSzh4U; path=/; expires=Sun, 28-Sep-25 16:02:47 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "98644ba16e4ca299-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"error\": \"Film not found\"\n}\n"
+            }
+          ]
+        },
+        {
+          "name": "Bloquer un film",
+          "id": "70fc7494-12f1-4e9a-9d8b-d180f4f8ec7b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{base_url}}/films/101/block"
+          },
+          "response": [
+            {
+              "id": "47c06823-4064-44ab-bec6-764cd5b438d2",
+              "name": "200",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films/101/block"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:34:34 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=a141eae2d43d7b5b"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=d7736bf036c70315"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759073733"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "252"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=iVWv0eozEB7eVhPUgKb520xWjSz2pjUsPxuBsXrc6pM-1759073674-1.0.1.1-eKCxGWVN5z0ge09ZEPDL7jpyWxAUd9ElxUA0mtOokqHf0_vODzutr_3dTmnQ6wAAbup9mqIUBVJK7LnaITuFtrRGbBhpo4tXEKZH2mZU5yo; path=/; expires=Sun, 28-Sep-25 16:04:34 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "98644e3cfac8a299-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"id\": 101,\n  \"title\": \"Inception\",\n  \"status\": \"blocked\"\n}\n"
+            },
+            {
+              "id": "734fdabb-3551-4fc8-87e9-2565ffda2558",
+              "name": "404",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films/101/block"
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:34:34 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=a141eae2d43d7b5b"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=d7736bf036c70315"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759073733"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "252"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=iVWv0eozEB7eVhPUgKb520xWjSz2pjUsPxuBsXrc6pM-1759073674-1.0.1.1-eKCxGWVN5z0ge09ZEPDL7jpyWxAUd9ElxUA0mtOokqHf0_vODzutr_3dTmnQ6wAAbup9mqIUBVJK7LnaITuFtrRGbBhpo4tXEKZH2mZU5yo; path=/; expires=Sun, 28-Sep-25 16:04:34 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "98644e3cfac8a299-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"error\": \"Film not found\"\n}\n"
+            }
+          ]
+        },
+        {
+          "name": "Supprimer un film",
+          "id": "3725d5f4-c71f-4c5d-8c26-12284266a389",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \r\n    \"availability\": false\r\n}\r\n  ",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{base_url}}/films/102"
+          },
+          "response": [
+            {
+              "id": "299c95a1-e03b-4b06-b2f3-b7fd5acd9ab7",
+              "name": "204",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \r\n    \"availability\": false\r\n}\r\n  ",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films/102"
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:36:29 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=6b6783937edb3edd"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=039db3a12ab91afc"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759073849"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "196"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=qt5ICZCks6nNtfeEz8e9SuwBvmzwmBp1TtfiDlPEgRg-1759073789-1.0.1.1-PgrcN9VUkQuDRL8Fu30K7TO37BXGstisI98vAuGBsFHNFSB_Kb1E.PIgm9AZaWGbDQqo3mNtN4f51nEYRg.sjRKXgYr0rQkGb4iEQwFXFF4; path=/; expires=Sun, 28-Sep-25 16:06:29 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "986451118c1ba291-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": ""
+            },
+            {
+              "id": "38a5a0f2-164a-40e0-832e-9c0382346071",
+              "name": "404",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \r\n    \"availability\": false\r\n}\r\n  ",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films/102"
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:36:29 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=6b6783937edb3edd"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=039db3a12ab91afc"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759073849"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "196"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=qt5ICZCks6nNtfeEz8e9SuwBvmzwmBp1TtfiDlPEgRg-1759073789-1.0.1.1-PgrcN9VUkQuDRL8Fu30K7TO37BXGstisI98vAuGBsFHNFSB_Kb1E.PIgm9AZaWGbDQqo3mNtN4f51nEYRg.sjRKXgYr0rQkGb4iEQwFXFF4; path=/; expires=Sun, 28-Sep-25 16:06:29 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "986451118c1ba291-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"error\": \"Film not found\"\n}\n"
+            }
+          ]
+        },
+        {
+          "name": "Signaler un film endommagé",
+          "id": "9fdff344-a284-4859-8bd3-695019a2af1e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"note\": \"DVD scratched and unreadable\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{base_url}}/films/101/damage"
+          },
+          "response": [
+            {
+              "id": "918dfe8f-55eb-4f13-8321-7b52646501d2",
+              "name": "200",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"note\": \"DVD scratched and unreadable\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films/101/damage"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:38:29 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=3de19f714538c508"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=f746c14f2b8619b5"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759073969"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "204"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=plRQq0s4139ZFwjhIjS8xK6Vb_30Ux5XjMMnG2aEfw4-1759073909-1.0.1.1-zw2trb2QXsL4pa1B.z2gAClyhT.pwW9NgwLP7Qgz8RRnDnJvRTXdoIRp00nbx0xN1EdqdYvO2Ep1NqP4eoByfpyVls9dQgAbiPIh4fKbad0; path=/; expires=Sun, 28-Sep-25 16:08:29 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "986453fcca45a2e1-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"id\": 101,\n  \"title\": \"Inception\",\n  \"status\": \"damaged\",\n  \"note\": \"DVD scratched and unreadable\"\n}\n"
+            },
+            {
+              "id": "2ada3eb7-6f0b-46eb-ab9c-0825a0684ffb",
+              "name": "400",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"note\": \"DVD scratched and unreadable\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films/101/damage"
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:38:29 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=3de19f714538c508"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=f746c14f2b8619b5"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759073969"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "204"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=plRQq0s4139ZFwjhIjS8xK6Vb_30Ux5XjMMnG2aEfw4-1759073909-1.0.1.1-zw2trb2QXsL4pa1B.z2gAClyhT.pwW9NgwLP7Qgz8RRnDnJvRTXdoIRp00nbx0xN1EdqdYvO2Ep1NqP4eoByfpyVls9dQgAbiPIh4fKbad0; path=/; expires=Sun, 28-Sep-25 16:08:29 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "986453fcca45a2e1-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"error\": \"Invalid damage report\"\n}\n"
+            },
+            {
+              "id": "40dc4e97-3206-4e0d-8229-d053ee2ed8ad",
+              "name": "404",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"note\": \"DVD scratched and unreadable\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/films/101/damage"
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:38:29 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=3de19f714538c508"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=f746c14f2b8619b5"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759073969"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "204"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=plRQq0s4139ZFwjhIjS8xK6Vb_30Ux5XjMMnG2aEfw4-1759073909-1.0.1.1-zw2trb2QXsL4pa1B.z2gAClyhT.pwW9NgwLP7Qgz8RRnDnJvRTXdoIRp00nbx0xN1EdqdYvO2Ep1NqP4eoByfpyVls9dQgAbiPIh4fKbad0; path=/; expires=Sun, 28-Sep-25 16:08:29 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "986453fcca45a2e1-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"error\": \"Film not found\"\n}\n"
+            }
+          ]
+        },
+        {
+          "name": "Retirer temporairement",
+          "id": "ed6b3b2a-f67d-46b6-8a9a-93d29ba8c1bd",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"note\": \"DVD scratched and unreadable\"\r\n}\r\n"
+            },
+            "url": "{{base_url}}/films/101/temporary-remove"
+          },
+          "response": [
+            {
+              "id": "4e240edd-5d54-4b7d-9341-c843e9ada39b",
+              "name": "200",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"note\": \"DVD scratched and unreadable\"\r\n}\r\n"
+                },
+                "url": "{{base_url}}/films/101/temporary-remove"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:49:04 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=f3e12926af003eea"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=31b213040e30eff3"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759074604"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "473"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=G.4ffpIgCOyUXBKOCJkZxg5HwgioMV7fsfSN1oejFyI-1759074544-1.0.1.1-0x8sB9jeBpfjQidoZLxhXhUJEdovucg89IOzVg2MVPszEjO3G2THspomnjl6DL9D8qY43jBwCHagz9ITrtOF9fFTS7s7HogQcAhwBFFwo4A; path=/; expires=Sun, 28-Sep-25 16:19:04 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "9864637cfd16a2e6-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"id\": 101,\n  \"title\": \"Inception\",\n  \"status\": \"temporarily_removed\"\n}\n"
+            },
+            {
+              "id": "29adb37a-debb-443b-9446-620a56eb443d",
+              "name": "404",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"note\": \"DVD scratched and unreadable\"\r\n}\r\n"
+                },
+                "url": "{{base_url}}/films/101/temporary-remove"
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 15:49:04 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=f3e12926af003eea"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=31b213040e30eff3"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759074604"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "473"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=G.4ffpIgCOyUXBKOCJkZxg5HwgioMV7fsfSN1oejFyI-1759074544-1.0.1.1-0x8sB9jeBpfjQidoZLxhXhUJEdovucg89IOzVg2MVPszEjO3G2THspomnjl6DL9D8qY43jBwCHagz9ITrtOF9fFTS7s7HogQcAhwBFFwo4A; path=/; expires=Sun, 28-Sep-25 16:19:04 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "9864637cfd16a2e6-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"error\": \"Film not found\"\n}\n"
+            }
+          ]
+        }
+      ],
+      "id": "66d2822c-26af-43a5-9ebd-d91124ec5b45"
+    },
+    {
+      "name": "Locations",
+      "item": [
+        {
+          "name": "Chercher un magasin",
+          "id": "3b47cea6-9a79-491b-8a03-9cdfb929ca19",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/locations"
+          },
+          "response": [
+            {
+              "id": "288a715c-1f5f-4a00-a85c-bd272e239867",
+              "name": "200",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/locations"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 14:32:05 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=aa668627979a5259"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=058884ac740ed0a2"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "118"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759069941"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "187"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=qxERD7Qaf1GwA4IPiQkotUQPEGiDfdECbuLYnWWpfjU-1759069925-1.0.1.1-yDkXrvV0tjxL64ZNYEctaDUhRDsNhmlnD9HTX.d84PoVA6HR6HcK0DKuyqIuoQvjHdxikQ0nhaORZL0YzP3uIHoQIGsXkIfr2ehdew3PKig; path=/; expires=Sun, 28-Sep-25 15:02:05 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "9863f2b58865a290-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "[\n  {\n    \"id\": 1,\n    \"name\": \"Downtown Store\",\n    \"address\": \"123 Main Street, Montreal, QC\",\n    \"phone\": \"+1-514-555-1234\",\n    \"status\": \"open\"\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Laval Store\",\n    \"address\": \"456 Boulevard Cartier, Laval, QC\",\n    \"phone\": \"+1-450-555-5678\",\n    \"status\": \"closed\"\n  }\n]\n"
+            }
+          ]
+        },
+        {
+          "name": "Détails d'un magasin",
+          "id": "5e01a0d9-01b8-4a70-9281-af15fcb389e8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/locations/1"
+          },
+          "response": [
+            {
+              "id": "bde52816-0ec3-4e52-acee-32438bce5df4",
+              "name": "200",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/locations/1"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 14:33:51 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "9863f54d3b4fa290-YUL"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=aa668627979a5259"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=058884ac740ed0a2"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "118"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759069941"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "142"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=qxERD7Qaf1GwA4IPiQkotUQPEGiDfdECbuLYnWWpfjU-1759069925-1.0.1.1-yDkXrvV0tjxL64ZNYEctaDUhRDsNhmlnD9HTX.d84PoVA6HR6HcK0DKuyqIuoQvjHdxikQ0nhaORZL0YzP3uIHoQIGsXkIfr2ehdew3PKig; path=/; expires=Sun, 28-Sep-25 15:02:05 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=VNDp6HJoWQ.JwUnUSyAIhkKS6M.mv9iE_OPTA_Bcjjk-1759070031-1.0.1.1-yf43lGvHoSkTGeQMUKG5T7aou7qEaDKd2tHq894ukCs.g90W2J9KXlJOxDFsKlcj7jlfnn5ipxbtySRnLXvdDGi2qXdo8ayxyqdM9SnOCqc; path=/; expires=Sun, 28-Sep-25 15:03:51 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"id\": 1,\n  \"name\": \"Downtown Store\",\n  \"address\": \"123 Main Street, Montreal, QC\",\n  \"phone\": \"+1-514-555-1234\",\n  \"status\": \"open\"\n}\n"
+            }
+          ]
+        },
+        {
+          "name": "Modifier les détails d'un magasin",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "8a38dc47-06de-4dd6-b411-41bd1175468d",
+                "exec": [
+                  "{\r",
+                  "    \r",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "8c7e13a1-003b-4c2a-a182-06cb86d06e94",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"phone\": \"+1-514-555-9999\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{base_url}}/locations/2"
+          },
+          "response": [
+            {
+              "id": "94903e51-3132-4cd8-9146-193ff23a79e2",
+              "name": "200",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"phone\": \"+1-514-555-9999\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/locations/2"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 14:50:43 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=300bc2062089a766"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=a544ab2cd85bb36d"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759071103"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "218"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=10kGlZF36LoiTSiqCmNU5x2s2U0Jc34OiVgCoZgLeik-1759071043-1.0.1.1-TFkv_i9u1FsBfIGZfCBnzRt_S._sdSWoCJGi.SSb3fPNhOkduFtY1uzpreGiPyzxUKVLhkndeEb_30Seb19kcxcisUCVkbKjeDQvAptDr5U; path=/; expires=Sun, 28-Sep-25 15:20:43 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "98640e06ea5aa291-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"id\": 1,\n  \"name\": \"Downtown Store\",\n  \"address\": \"123 Main Street, Montreal, QC\",\n  \"phone\": \"+1-514-555-9999\",\n  \"status\": \"open\"\n}\n"
+            }
+          ]
+        },
+        {
+          "name": "Ajouter un magasin",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "cc02484b-6b8d-4da5-86b1-29634c998bf3",
+                "exec": [
+                  "pm.test(\"Successful POST request\", function () {",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "2d9acfd4-f98b-4e33-91e9-de2eb4ed533e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Quebec City Store\",\n  \"address\": \"789 Rue Saint-Jean, Quebec, QC\",\n  \"phone\": \"+1-418-555-1111\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{base_url}}/locations"
+          },
+          "response": [
+            {
+              "id": "327567a5-c060-47ed-9c9a-dabee7ce6a23",
+              "name": "201",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Quebec City Store\",\n  \"address\": \"789 Rue Saint-Jean, Quebec, QC\",\n  \"phone\": \"+1-418-555-1111\"\n}\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/locations"
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 14:36:49 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=e840c7a1bcd99ab6"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=59551ea5529bf05f"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759070269"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "168"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=ycCSsKgN1UQC7HAquoEKpfuHrGqZPLisWN1_LDt9K.4-1759070209-1.0.1.1-BRZ1lbTdsSjqvIznPEWQ6s1riK_i_bB1B5hxO2ML.AouHM4keNyIWidGSM2G8smwL5vK_fg30G941_C1DvPIHGQ_YpIsphPmlyJUoqkd8b0; path=/; expires=Sun, 28-Sep-25 15:06:49 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "9863f9aa1af0a2dc-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"id\": 3,\n  \"name\": \"Quebec City Store\",\n  \"address\": \"789 Rue Saint-Jean, Quebec, QC\",\n  \"phone\": \"+1-418-555-1111\",\n  \"status\": \"open\"\n}\n"
+            }
+          ]
+        },
+        {
+          "name": "Remplacer un magasin",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "cc02484b-6b8d-4da5-86b1-29634c998bf3",
+                "exec": [
+                  "pm.test(\"Successful POST request\", function () {",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "8a8c386e-31ee-4e34-8823-2c196eeb0b48",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Downtown Store Updated\",\n  \"address\": \"321 Peel Street, Montreal, QC\",\n  \"phone\": \"+1-514-555-2222\",\n  \"status\": \"open\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{base_url}}/locations/1"
+          },
+          "response": [
+            {
+              "id": "62d14b3e-0967-4da0-9978-37985ee1451d",
+              "name": "200",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Downtown Store Updated\",\n  \"address\": \"321 Peel Street, Montreal, QC\",\n  \"phone\": \"+1-514-555-2222\",\n  \"status\": \"open\"\n}\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/locations/1"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 14:39:48 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=dc44a5875573853c"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=87bd843a6553cc7e"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "119"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759070448"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "130"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=JSKPAk784HgG_XC0DTmoxlr6iddSKSRX0Upr1tD1z6w-1759070388-1.0.1.1-S29fv5kcYM4Lwv90._y4dx9lGOi_6oTK0lcp._116tTx212XQaPLnWZK8BEYvyQ7CGI4wNdf6uCMXOPr53rlJYrwkPP7cwSrlhYUMaFqjME; path=/; expires=Sun, 28-Sep-25 15:09:48 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "9863fe07fc81a2ab-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"id\": 1,\n  \"name\": \"Downtown Store Updated\",\n  \"address\": \"321 Peel Street, Montreal, QC\",\n  \"phone\": \"+1-514-555-2222\",\n  \"status\": \"open\"\n}\n"
+            }
+          ]
+        },
+        {
+          "name": "Ouvrir un magasin",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "cc02484b-6b8d-4da5-86b1-29634c998bf3",
+                "exec": [
+                  "pm.test(\"Successful POST request\", function () {",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "76978939-6b81-444d-927b-9b4a0852e3bc",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 2,\n  \"name\": \"Laval Store\",\n  \"address\": \"456 Boulevard Cartier, Laval, QC\",\n  \"phone\": \"+1-450-555-5678\",\n  \"status\": \"open\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{base_url}}/locations/2/open"
+          },
+          "response": [
+            {
+              "id": "c948ca0f-f1d4-46e4-86ca-8a69817c7363",
+              "name": "200",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"status\": \"open\"\n}\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/locations/2/open"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 14:41:45 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=06af3972624798df"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=7150a3ab90c05965"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "118"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759070514"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "127"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=6kPMCS1SpAQWpQsOVraU5JmTOmUQF08Tz8e7t7kmkws-1759070505-1.0.1.1-qqBHihecBOHgkvJZLRXmp2LxzUT05Fuvem1Ft6nZPMzjNwEsSpUq.ZLBIafwolYByzN0La3dIcw4kZCXKXR2Ka0NPnjoBFyOe6rPCQQ1L3U; path=/; expires=Sun, 28-Sep-25 15:11:45 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "986400e29d6ea2ab-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"id\": 2,\n  \"name\": \"Laval Store\",\n  \"address\": \"456 Boulevard Cartier, Laval, QC\",\n  \"phone\": \"+1-450-555-5678\",\n  \"status\": \"open\"\n}\n"
+            }
+          ]
+        },
+        {
+          "name": "Fermer un magasin",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "cc02484b-6b8d-4da5-86b1-29634c998bf3",
+                "exec": [
+                  "pm.test(\"Successful POST request\", function () {",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "0417f81c-d09b-4770-8a55-f108aea7a687",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"statut\": \"closed\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{base_url}}/locations/2/close"
+          },
+          "response": [
+            {
+              "id": "626d5f91-2d53-404a-a654-a20849e5321e",
+              "name": "200",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"statut\": \"closed\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/locations/2/close"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 14:44:13 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=e05e567da6f0b6e8"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=11a0c769da7b974c"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "118"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759070662"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "138"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=52cn28Zuhka9phMaOKwXs0_um7Wsb7sHpmnWhiHbrQg-1759070653-1.0.1.1-aonQbPze6sFINhDyZkMsge6ZkYNJBIH9rL6zKeX3OBay6RvKIrhE4WvDt6pgwK5cyjNI8Pcd7dP040_YlOpdb2FODrTcUeBR.eKkNSrOZxk; path=/; expires=Sun, 28-Sep-25 15:14:13 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "9864047cfc0ea2db-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n  \"id\": 2,\n  \"name\": \"Laval Store\",\n  \"address\": \"456 Boulevard Cartier, Laval, QC\",\n  \"phone\": \"+1-450-555-5678\",\n  \"status\": \"closed\"\n}\n"
+            }
+          ]
+        },
+        {
+          "name": "Retirer un magasin",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "cc02484b-6b8d-4da5-86b1-29634c998bf3",
+                "exec": [
+                  "pm.test(\"Successful POST request\", function () {",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "f5a31b49-3809-46ba-852b-18ab3534514f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"id\": \"8\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{base_url}}/locations/2"
+          },
+          "response": [
+            {
+              "id": "53352304-9bd1-4f32-8afb-e49b1a5e050c",
+              "name": "204",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"id\": \"8\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/locations/2"
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Sun, 28 Sep 2025 14:45:26 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "x-srv-trace",
+                  "value": "v=1;t=961db52d60ca16ac"
+                },
+                {
+                  "key": "x-srv-span",
+                  "value": "v=1;s=a919f01332457166"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "120"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "118"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "1759070741"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+                },
+                {
+                  "key": "vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "142"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "__cf_bm=XEh683kOsoGZjX3J8MO7IB_nsh5DxXGHvTG4g4zeV4Q-1759070726-1.0.1.1-OAAT2R5kLXnCYrCWbw.KWbBYpDzDp43CN2i9g2DGX4DsaQN_UWm3reaQk3L5fAc9Qx2_vDd8UXYCJe8IIwsnoBvcn3SlEUoawpyJyDXymxE; path=/; expires=Sun, 28-Sep-25 15:15:26 GMT; domain=.pstmn.io; HttpOnly; Secure; SameSite=None"
+                },
+                {
+                  "key": "Server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "CF-RAY",
+                  "value": "9864064a2c33a2db-YUL"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "responseTime": null,
+              "body": "{\n    \"message\": \"Magasin supprimé avec succès\"\n}"
+            }
+          ]
+        }
+      ],
+      "id": "a4a5a6ce-831b-4c8e-974a-2bd43db45681"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": {
+      "token": "gitlab_crosemont_6o9xLah_ntLy9UORkpvsIW86MQp1OmlrCA.01.0y0l0kenu"
+    }
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "ef538d48-8eb5-459a-ad47-ea7f58a0e3ad",
+        "type": "text/javascript",
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "f347c92f-29eb-4792-b457-4e4cdf8e6873",
+        "type": "text/javascript",
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "id",
+      "value": "1"
+    },
+    {
+      "key": "base_url",
+      "value": "https://template.postman-echo.com"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+-- ===================================================================
+-- 2. Insertion des données
+-- ===================================================================
+
+START TRANSACTION;
+
+DELETE FROM utilisateur_roles;
+DELETE FROM utilisateurs;
+DELETE FROM roles;
+
+-- ------------------------------------------------------------
+--  Insertion des rôles
+-- ------------------------------------------------------------
+
+INSERT INTO roles (nom) VALUES
+('manager'),
+('employe'),
+('membre'),
+('visiteur');
+
+-- ------------------------------------------------------------
+--  Insertion des utilisateurs
+--  mot de passe : busterblock123
+-- ------------------------------------------------------------
+
+INSERT INTO utilisateurs (id, nom, prenom, courriel, mot_de_passe) VALUES
+('authbb|92bf5d1c-e424-4f67-b29d-2e3ba0fd787d', 'Assiobo',    'Eloge',  'eloge.a@busterblock.com',             '$2a$12$EaqyqLAMLEdQX9qlAA8g/.B72PRkoQNyqHIjaEiU9cuKVrtOC9C7O'),
+('authbb|2c589dfb-0e1e-4598-af73-86b82fc2e458', 'Bidault-Meresse', 'Lucas',   'lucas.bm@busterblock.com',          '$2a$12$Fbi07/FfpRsDNg0cjsVTQOKNA8JmKX94lFxaMMojkSq8t2jTwKyNG'),
+('authbb|0bc4bd78-a886-4cf3-97e7-935ff15a22ec', 'Tran',  'Tien', 'tien.t@busterblock.com',   '$2a$12$X7BVu6kzAOf1zJxQfS.EAe9hCYMX7jX8CbpS41F3rCKK66.Tws9OC'),
+('authbb|4f2ce17d-3f39-4a7e-8694-a0c953f4b39c', 'Sabourin',  'Matthew',   'matthew.s@busterblock.com',            '$2a$12$juLIoANUfY/04.Dofyv.QOsw6AIhgsOGIix0Od57LJuU3VMU8.Sv6');
+-- ------------------------------------------------------------
+-- Attribution des rôles
+-- ------------------------------------------------------------
+
+INSERT INTO utilisateurs_roles (utilisateur_id, role_id) VALUES
+('authbb|92bf5d1c-e424-4f67-b29d-2e3ba0fd787d', 1), -- manager
+('authbb|2c589dfb-0e1e-4598-af73-86b82fc2e458', 2), -- employe
+('authbb|0bc4bd78-a886-4cf3-97e7-935ff15a22ec', 3), -- membre
+('authbb|4f2ce17d-3f39-4a7e-8694-a0c953f4b39c', 4); -- visiteur
+
+COMMIT;

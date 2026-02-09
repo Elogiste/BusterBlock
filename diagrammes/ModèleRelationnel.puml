@@ -1,0 +1,72 @@
+@startuml
+' Config
+hide circle
+skinparam linetype ortho
+!theme cerulean-outline
+ 
+' Entities
+entity "**Magasins**" as Mag {
+<img:https://emojis.wiki/emoji-pics/facebook/key-facebook.png{scale=0.075}> id: INT
+--
+<img:https://images.emojiterra.com/twitter/v13.1/512px/1f539.png{scale=0.035}> nom: VARCHAR(255)
+<img:https://images.emojiterra.com/twitter/v13.1/512px/1f539.png{scale=0.035}> adresse: VARCHAR(255)
+<img:https://images.emojiterra.com/twitter/v13.1/512px/1f539.png{scale=0.035}> telephone: VARCHAR(255)
+<img:https://images.emojiterra.com/twitter/v13.1/512px/1f539.png{scale=0.035}> status: BOOLEAN
+}
+
+entity "**Films**" as Fil {
+<img:https://emojis.wiki/emoji-pics/facebook/key-facebook.png{scale=0.075}> id: INT
+--
+<img:https://cdn3.emoji.gg/emojis/2756_red_key.png{scale=0.0175}> id_magasin: INT
+<img:https://images.emojiterra.com/twitter/v13.1/512px/1f539.png{scale=0.035}> titre: VARCHAR(100)
+<img:https://images.emojiterra.com/twitter/v13.1/512px/1f539.png{scale=0.035}> genre: VARCHAR(50)
+<img:https://images.emojiterra.com/twitter/v13.1/512px/1f539.png{scale=0.035}> resume: TEXT
+<img:https://images.emojiterra.com/twitter/v13.1/512px/1f539.png{scale=0.035}> nbr_exemplaire_disponible: INT
+}
+
+entity "**Locations**" as Loc {
+<img:https://emojis.wiki/emoji-pics/facebook/key-facebook.png{scale=0.075}> id: INT
+--
+<img:https://cdn3.emoji.gg/emojis/2756_red_key.png{scale=0.0175}> id_utilisateur: INT
+<img:https://cdn3.emoji.gg/emojis/2756_red_key.png{scale=0.0175}> id_film: INT
+<img:https://cdn3.emoji.gg/emojis/2756_red_key.png{scale=0.0175}> id_magasin: INT
+<img:https://images.emojiterra.com/twitter/v13.1/512px/1f539.png{scale=0.035}> date_location: TIMESTAMP
+<img:https://images.emojiterra.com/twitter/v13.1/512px/1f539.png{scale=0.035}> date_retour: TIMESTAMP
+}
+ 
+entity "**Utilisateurs**" as Uti {
+<img:https://emojis.wiki/emoji-pics/facebook/key-facebook.png{scale=0.075}> id: VARCHAR(255)
+--
+<img:https://images.emojiterra.com/twitter/v13.1/512px/1f539.png{scale=0.035}> nom: VARCHAR(255)
+<img:https://images.emojiterra.com/twitter/v13.1/512px/1f539.png{scale=0.035}> prenom: VARCHAR(255)
+<img:https://images.emojiterra.com/twitter/v13.1/512px/1f539.png{scale=0.035}> courriel: VARCHAR(255)
+<img:https://images.emojiterra.com/twitter/v13.1/512px/1f539.png{scale=0.035}> mot_de_passe: VARCHAR(255)
+<img:https://images.emojiterra.com/twitter/v13.1/512px/1f539.png{scale=0.035}> date_creation: TIMESTAMP
+}
+
+entity "**Roles**" as Rol {
+<img:https://emojis.wiki/emoji-pics/facebook/key-facebook.png{scale=0.075}> id: INT
+--
+<img:https://images.emojiterra.com/twitter/v13.1/512px/1f539.png{scale=0.035}> nom: VARCHAR(255)
+}
+
+entity "**Utilisateurs_Roles**" as Uti_Rol {
+<img:https://emojis.wiki/emoji-pics/facebook/key-facebook.png{scale=0.075}> <img:https://cdn3.emoji.gg/emojis/2756_red_key.png{scale=0.0175}> utilisateur_id: VARCHAR(255)
+<img:https://emojis.wiki/emoji-pics/facebook/key-facebook.png{scale=0.075}> <img:https://cdn3.emoji.gg/emojis/2756_red_key.png{scale=0.0175}> role_id: INT
+--
+}
+ 
+' Liens
+Fil |o.[#Black].o| Mag
+
+Uti_Rol }o.[#Black].|| Uti
+Uti_Rol }o.[#Black].|| Rol
+ 
+Loc }o.[#Black].|| Fil
+<<<<<<< HEAD
+Loc }o.[#Black].|| Mag
+Loc }o.[#Black].|| Uti
+=======
+Loc }o.[#Black].|| Mem
+>>>>>>> fusion_magasins_films
+@enduml

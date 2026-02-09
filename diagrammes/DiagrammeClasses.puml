@@ -1,0 +1,67 @@
+@startuml
+' Config
+hide circle
+skinparam linetype ortho
+!theme cerulean-outline
+
+' Classes
+class "**Magasins**" as Mag {
+    + id : int
+    --
+    nom : String
+    adresse : String
+    telephone : String
+    status : boolean
+}
+
+class "**Films**" as Fil {
+    + id : int
+    --
+    id_magasin : int
+    titre : String
+    genre : String
+    resume : String
+    nbr_exemplaire_disponible : int
+}
+
+class "**Utilisateurs**" as Uti {
+    + id : String
+    --
+    nom : String
+    prenom : String
+    courriel : String
+    mot_de_passe : String
+    date_creation : Timestamp
+}
+
+class "**Roles**" as Rol {
+    + id : int
+    --
+    nom : String
+}
+
+class "**Utilisateurs_Roles**" as Uti_Rol {
+    + utilisateur_id : String
+    + role_id : int
+}
+
+class "**Locations**" as Loc {
+    + id : int
+    --
+    id_utilisateur : int
+    id_film : int
+    id_magasin : int
+    date_location : Timestamp
+    date_retour : Timestamp
+}
+
+' Liens
+Fil -[#Black]-> Mag
+
+Loc -[#Black]-> Fil
+Loc -[#Black]-> Mag
+Loc -[#Black]-> Uti
+
+Uti_Rol -[#Black]-> Uti
+Uti_Rol -[#Black]-> Rol
+@enduml

@@ -1,0 +1,354 @@
+{
+  "info": {
+    "_postman_id": "4db00e84-2cdb-4ac9-84ce-50ce9c1f333c",
+    "name": "TestBusterblock",
+    "description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" width=\"2162\" height=\"1530\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n    \n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Films",
+      "item": [
+        {
+          "name": "Lister les films",
+          "id": "6e364c87-9f68-4793-8229-a74d365edf31",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "{{jwt_token_visiteur}}"
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url_api}}/films"
+          },
+          "response": []
+        },
+        {
+          "name": "Creation de film",
+          "id": "7d088648-e35b-4785-9cb2-4e871d26e8c0",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "{{jwt_token_manager}}"
+              }
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id_magasin\": 9,\r\n    \"titre\": \"Objet connecté\",\r\n    \"genre\": \"Horreur\",\r\n    \"resume\": \"AAAAAHHHHHHHHHHHHHHHHH||\",\r\n    \"nbr_exemplaire_disponible\": 18\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{base_url_api}}/films"
+          },
+          "response": []
+        },
+        {
+          "name": "Supprimer un film",
+          "id": "5f52a491-206c-465f-8611-cfc46944c767",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "{{jwt_token_manager}}"
+              }
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": "{{base_url_api}}/films/12"
+          },
+          "response": []
+        },
+        {
+          "name": "Recherche par id",
+          "id": "67249e53-a416-491b-a75b-29f8e8218540",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "{{jwt_token_manager}}"
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url_api}}/films/details/2"
+          },
+          "response": []
+        }
+      ],
+      "id": "4f020e96-f5a8-4e5f-89be-46be677b360f"
+    },
+    {
+      "name": "Magasins",
+      "item": [
+        {
+          "name": "Liste des magasins",
+          "id": "78666d80-cfdb-44c3-b683-94e06c4a8484",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "{{jwt_token_visiteur}}"
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url_api}}/magasins"
+          },
+          "response": []
+        },
+        {
+          "name": "Recherche par id",
+          "id": "5b3b5fd8-5e32-4daf-8f7d-c60a46bcc625",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "{{jwt_token_visiteur}}"
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url_api}}/magasins/2"
+          },
+          "response": []
+        },
+        {
+          "name": "Recherche par nom",
+          "id": "71bdcec8-308a-428d-9356-a414544ee6f6",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "{{jwt_token_visiteur}}"
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url_api}}/magasins?nom=Drummondville",
+              "host": [
+                "{{base_url_api}}"
+              ],
+              "path": [
+                "magasins"
+              ],
+              "query": [
+                {
+                  "key": "nom",
+                  "value": "Drummondville"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Creation de magasins",
+          "id": "382284e2-feed-4efb-a170-b6856e4b7ccb",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "{{jwt_token_manager}}"
+              }
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\":11,\r\n        \"nom\": \"Nouveau Busterblock\",\r\n        \"adresse\": \"86 Rue Jean, Montréal, QC\",\r\n        \"telephone\": \"418-563-1109\",\r\n        \"status\": false\r\n            }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{base_url_api}}/magasins"
+          },
+          "response": []
+        },
+        {
+          "name": "Suppression de magasin",
+          "id": "2a5d8bb9-04b1-481e-9311-a015a6ea4835",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "{{jwt_token_manager}}"
+              }
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nom\": \"BusterBlock Nouveau\",\r\n    \"adresse\": \"84 Rue Saint-Jean, Québec, QC\",\r\n    \"telephone\": \"418-652-0911\",\r\n    \"status\": false\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{base_url_api}}/magasins/11"
+          },
+          "response": []
+        },
+        {
+          "name": "Modification de magasin",
+          "id": "a364a9b2-2f9d-4321-82d1-05fb2a00f7c3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "{{jwt_token_visiteur}}"
+              }
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \r\n    \"status\": true\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{base_url_api}}/magasins/6"
+          },
+          "response": []
+        }
+      ],
+      "id": "d4e615d1-3df1-497a-9e4a-2169521456d4"
+    },
+    {
+      "name": "http:/localhost:8090/auth/.well-known/jwks.json",
+      "id": "ab03c07c-3f5b-4264-ae3a-57a86237abbb",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": "{{base_url_auth}}/auth/.well-known/jwks.json"
+      },
+      "response": []
+    },
+    {
+      "name": "Creation de jeton",
+      "id": "6fe4482a-510f-4d1c-b1a3-84493bf4a6dd",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"courriel\": \"matthew.s@busterblock.com\",\r\n    \"mot_de_passe\": \"Matthew123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8090/auth/connexion"
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "42bb9af7-a8c8-4dfe-9d3c-e93a16af147a",
+        "type": "text/javascript",
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "f3de8fed-0fa4-4eea-82cc-257e5eb12d8e",
+        "type": "text/javascript",
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "id",
+      "value": "1"
+    },
+    {
+      "key": "base_url_auth",
+      "value": "https://template.postman-echo.com"
+    },
+    {
+      "key": "jwt_token_manager",
+      "value": ""
+    },
+    {
+      "key": "jwt_token_employe",
+      "value": ""
+    },
+    {
+      "key": "jwt_token_membre",
+      "value": ""
+    },
+    {
+      "key": "jwt_token_visiteur",
+      "value": ""
+    },
+    {
+      "key": "base_url_api",
+      "value": ""
+    }
+  ]
+}

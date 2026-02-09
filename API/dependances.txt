@@ -1,0 +1,9 @@
+fastapi[standard]
+uvicorn[standard]
+mysqlclient
+pytest
+pytest-bdd
+mariadb
+httpx
+python-jose[cryptography]
+requests

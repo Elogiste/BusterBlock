@@ -1,0 +1,69 @@
+@startuml
+' Composants externes
+component "Application cliente" as Client
+database "Base de données" as BD
+
+' Main Package
+package "app" {
+
+    ' Couche Interface
+    package "Couche interface" {
+        component "DTO" as DTO {
+            [FilmBaseDTO]
+            [FilmCreation]
+            [FilmModification]
+            [FilmRemplacement]
+            [FilmReponse]
+
+            [MagasinBaseDTO]
+            [MagasinCreation]
+            [MagasinModification]
+            [MagasinRemplacement]
+            [MagasinReponse]
+        }
+        component "Routeurs" as Routeurs {
+            [FilmsRouteur]
+            [MagasinsRouteur]
+        }
+        component "Securite" as Securite {
+            [auth0]
+            [stationsRéponse]
+        }
+    }
+
+    ' Couche Métier
+    package "Couche métier" {
+        component "Services" as Services {
+            [MagasinsService]
+            [FilmsService]
+        }
+        component "Modele" as Modele{
+            [Film]
+            [Magasin]
+            [MagasinBase]
+        }
+    }
+
+    ' Couche d'Accès aux Données
+    package "Couche d'accès aux données" {
+        component "DAO" as DAO {
+            [BaseDAO]
+            [FilmsDAO]
+            [MagasinsDAO]
+        }
+        component "DonneesMemoire" as DonneesMemoire {
+            [donnees]
+        }
+    }
+}
+
+' Liens
+Client --> Routeurs
+Routeurs --> DTO
+Securite --> Routeurs
+Routeurs --> Services
+Services --> Modele
+Services --> DAO
+DAO --> BD
+
+@enduml

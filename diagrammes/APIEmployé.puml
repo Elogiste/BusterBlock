@@ -1,0 +1,14 @@
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Employé" as employee
+
+rectangle "Accès Employé (BusterBlock API)" {
+  employee --> (Consulter le répertoire des médias)
+  employee --> (Rechercher des items)
+  employee --> (Modifier la location / disponibilité)
+  employee --> (Consulter un magasin)
+  employee --> (Rechercher un magasin)
+  employee --> (Filtrer la recherche d'un magasin)
+  employee --> (Gérer l’inventaire par magasin)
+}

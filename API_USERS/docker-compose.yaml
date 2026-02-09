@@ -1,0 +1,43 @@
+networks:
+  busterblock-net:
+    name: busterblock-net
+services:
+  bd:
+    container_name: bd_auth
+    image: mariadb
+    env_file:
+      - .env
+    volumes: 
+      - auth_donnees_bd:/var/lib/mysql
+      - ./docker/bd/busterblock_utilisateurs.ldd:/docker-entrypoint-initdb.d/busterblock_utilisateurs.ldd:ro
+      - ./docker/bd/busterblock_utilisateurs.lmd:/docker-entrypoint-initdb.d/busterblock_utilisateurs.lmd:ro
+      - ./docker/bd/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    ports:
+      - "3340:3306"
+    networks:
+      - busterblock-net
+    healthcheck:
+      test: [ "CMD", "mariadb-admin", "ping", "-h", "127.0.0.1", "-u", "root", "--password=${MARIADB_ROOT_PASSWORD}" ]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  api:
+    container_name: api_auth
+    build: .
+    ports:
+      - "8090:8080"
+    env_file:
+      - .env
+    volumes:
+      - ./app:/code/app
+      - ./.env:/code/.env
+    networks:
+      - busterblock-net
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8080 --reload
+    depends_on:
+      bd:
+        condition: service_healthy
+
+volumes:
+  auth_donnees_bd:

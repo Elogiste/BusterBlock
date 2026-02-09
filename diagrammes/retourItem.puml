@@ -1,0 +1,35 @@
+' Actors
+actor "Membre" as member
+participant "Application cliente" as app
+participant "API REST de BusterBlock" as api
+participant "Base de données" as db
+
+' Sequence flow
+member -> app : retourne un item
+app -> api : PUT /api/v1/locations/{id_location}
+note right of api
+  Requête pour mettre à jour
+  le statut de la location.
+end note
+
+api -> db : SELECT * FROM Locations WHERE id_location = {id}
+note right of db
+  Vérifie que la location
+  existe.
+end note
+
+db --> api : données de la location
+api -> db : UPDATE Locations SET date_retour = {date_courante} WHERE id_location = {id}
+note right of db
+  Met à jour la date de retour.
+end note
+
+api -> db : UPDATE Medias SET disponible = TRUE WHERE id_media = {id}
+note right of db
+  Rend l'item à nouveau
+  disponible.
+end note
+
+db --> api : confirmation
+api --> app : 200 OK
+app --> member : Confirmation du retour de l'item

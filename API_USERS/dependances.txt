@@ -1,0 +1,9 @@
+fastapi[standard]
+uvicorn[standard]
+pytest
+pytest-bdd
+mariadb
+python-jose[cryptography]
+requests
+passlib[bcrypt]
+jwcrypto

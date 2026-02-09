@@ -1,0 +1,15 @@
+@startuml
+title Rechercher des items (aucun résultat trouvé)
+
+actor "Utilisateur" as user
+participant "Application cliente" as client
+participant "API REST BusterBlock" as api
+database "BD BusterBlock" as bd
+
+user -> client : Entrer un mot-clé (ex. "FilmInexistant")
+client -> api : GET /api/v1/medias?titre=FilmInexistant
+api -> bd : Rechercher les items correspondant
+bd -> api : Aucun item trouvé
+api -> client : 200 OK []
+client -> user : Afficher "Aucun résultat"
+@enduml

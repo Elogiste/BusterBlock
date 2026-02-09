@@ -1,0 +1,15 @@
+@startuml
+title Description d’un item (BusterBlock)
+
+actor "Utilisateur (non-membre ou membre)" as user
+participant "Application cliente" as client
+participant "API REST BusterBlock" as api
+database "BD BusterBlock" as bd
+
+user -> client : Cliquer sur un item
+client -> api : GET /api/v1/medias/{id}
+api -> bd : Rechercher l’item par son id
+bd -> api : Retourner les informations de l’item
+api -> client : 200 OK {détails item JSON}
+client -> user : Afficher la description complète
+@enduml

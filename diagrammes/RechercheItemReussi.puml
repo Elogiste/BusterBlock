@@ -1,0 +1,15 @@
+@startuml
+title Rechercher des items (BusterBlock)
+
+actor "Utilisateur (non-membre ou membre)" as user
+participant "Application cliente" as client
+participant "API REST BusterBlock" as api
+database "BD BusterBlock" as bd
+
+user -> client : Entrer un mot-clé et lancer la recherche
+client -> api : GET /api/v1/medias?titre=motclé
+api -> bd : Chercher les items correspondant au mot-clé
+bd -> api : Retourner la liste d’items
+api -> client : 200 OK [liste d’items JSON]
+client -> user : Afficher la liste des résultats
+@enduml
